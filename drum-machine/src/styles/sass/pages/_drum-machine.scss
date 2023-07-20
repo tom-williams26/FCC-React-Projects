@@ -1,0 +1,8 @@
+@use '../abstracts/mixins' as mix;
+
+#drum-machine {
+	@include mix.flexCustom(column, center, center);
+	height: 100vh;
+	background-color: #454d66;
+	overflow: auto;
+}

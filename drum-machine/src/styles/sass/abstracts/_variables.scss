@@ -1,0 +1,22 @@
+$font-stack: Helvetica, Arial, sans-serif;
+$font-stack-textarea: monospace, Arial, sans-serif;
+$primary-color: #333;
+
+$bg-light: rgb(255, 255, 255);
+$bg-dark: rgb(65, 63, 66);
+$text-light: rgb(240, 240, 240);
+$text-dark: rgb(0, 0, 0);
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
+
+/* Media queries device screen sizes. */
+
+$xs: 0em;  // mobile only
+$sm: 24em;  // mobile and low-res tablets
+$med: 40em; // hi-res tablets and low-res laptops
+$lg: 60em;   // 1080 and hi-res laptops
+$xl: 87.5em; // 4k and hi-res desktop

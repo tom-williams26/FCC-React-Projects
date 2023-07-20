@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as v;
+
+// Flexbox mixin.
+@mixin flexCustom($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+// Responsive design/ Media-query breakpoints.
+@mixin xs {
+    @media (min-width: v.$xs) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (min-width: v.$sm) {
+        @content;
+    }
+}
+@mixin med {
+    @media (min-width: v.$med) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: v.$lg) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: v.$xl) {
+        @content;
+    }
+}

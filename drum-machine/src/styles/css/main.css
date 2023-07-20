@@ -1,0 +1,135 @@
+/* Box sizing rules - reset all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default styling */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set core body defaults */
+html, body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles on ul, ol elements with a list role, 
+which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Media queries device screen sizes. */
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-spacing: 0.5px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  font-family: monospace, Arial, sans-serif;
+}
+
+p, ol, ul, blockquote, pre, code, small {
+  line-height: 1.5em;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-size: 14px;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  line-height: 0;
+}
+
+.display {
+  min-height: 600px;
+  min-width: 300px;
+  background-color: #58b368;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.display div {
+  height: 300px;
+  width: 250px;
+  background-color: #dad873;
+  margin: 1rem 0;
+}
+
+#drum-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #454d66;
+  overflow: auto;
+}/*# sourceMappingURL=main.css.map */
