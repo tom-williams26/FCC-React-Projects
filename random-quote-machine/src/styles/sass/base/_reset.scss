@@ -1,0 +1,77 @@
+/* Box sizing rules - reset all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+/* Remove default styling */
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  // Fill the viewport, even when empty.
+  min-height: 100vh;
+
+  // Make text look nicer - but at the cost of performance issues (30 second delay).
+  text-rendering: optimizeSpeed;
+
+  // Makes text accessible, readable text.
+  // line-height: 1;
+  background-color: #ffffff; 
+}
+
+/* Remove list styles on ul, ol elements with a list role, 
+which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}

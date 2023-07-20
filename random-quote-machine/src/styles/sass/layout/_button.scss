@@ -1,0 +1,59 @@
+@use '../utils/mixins' as mixin;
+
+
+@include mixin.xs {
+    #new-quote {
+        padding: 0.5em 1em;
+        font-size: 0.8em;
+        border: none;
+        border-radius: 0.3em;
+        color: #ffffff;
+    }
+
+    .twitter-icon {
+        font-size: 2em;
+    }
+}
+
+@include mixin.sm {
+    #new-quote {
+        font-size: 1em;
+    }
+
+    .twitter-icon {
+        font-size: 2.3em;
+    }
+}
+
+@include mixin.med {
+    #new-quote {
+        font-size: 1.2em;
+    }
+
+    .twitter-icon {
+        font-size: 3em;
+    }
+}
+
+@include mixin.lg {
+    #new-quote {
+        padding: 0.6em 1.2em;
+        font-size: 1.4em;
+    }
+
+    .twitter-icon {
+        font-size: 3.2em;
+    }
+}
+
+@include mixin.xl {
+    #new-quote {
+        padding: 0.7em 1.3em;
+        font-size: 1.7em;
+    }
+
+    .twitter-icon {
+        font-size: 4.3em;
+    }
+}
+

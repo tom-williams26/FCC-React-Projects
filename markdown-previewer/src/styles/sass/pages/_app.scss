@@ -1,0 +1,7 @@
+@use '../abstracts/mixins' as mix;
+
+.app {
+	height: 100vh;
+	background-color: #87b5b5;
+	overflow: auto;
+}

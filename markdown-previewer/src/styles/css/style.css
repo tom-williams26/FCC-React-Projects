@@ -1,0 +1,258 @@
+/* Box sizing rules - reset all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default styling */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set core body defaults */
+html, body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles on ul, ol elements with a list role, 
+which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Media queries device screen sizes. */
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-spacing: 0.5px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  font-family: monospace, Arial, sans-serif;
+}
+
+p, ol, ul, blockquote, pre, code, small {
+  line-height: 1.5em;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-size: 14px;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  line-height: 0;
+}
+
+.editor-layout {
+  max-width: 500px;
+  margin: 1.125rem auto;
+  padding: 0 2rem;
+}
+.editor-layout .toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #4aa3a3;
+  padding: 0.3rem;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  font-size: 1rem;
+  color: black;
+}
+.editor-layout #editor {
+  min-height: 200px;
+  width: 100%;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+}
+.editor-layout textarea {
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border-top: none;
+}
+
+.preview-layout {
+  max-width: 800px;
+  margin: 1.125rem auto;
+  padding: 0 1rem;
+}
+.preview-layout .toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #4aa3a3;
+  padding: 0.3rem;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  font-size: 1rem;
+  color: black;
+}
+.preview-layout #preview {
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding: 1rem;
+  font-size: 0.875rem;
+  overflow-wrap: break-word;
+  background-color: #c0d8d8;
+  border: 1px solid #1d2f2f;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  border-top: none;
+}
+.preview-layout #preview blockquote {
+  border-left: 3px solid #224b4b;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+.preview-layout #preview pre {
+  display: block;
+  overflow: auto;
+  background-color: #ffffff;
+  padding: 5px;
+  line-height: 1.2;
+  font-family: monospace;
+  margin: 1em 0px;
+  font-size: 0.875rem;
+}
+.preview-layout #preview > pre > code {
+  font-size: 0.775rem;
+}
+.preview-layout #preview > p > code {
+  padding: 3px;
+}
+.preview-layout #preview code {
+  font-size: 0.875rem;
+  font-weight: bold;
+  overflow: auto;
+  background-color: #ffffff;
+}
+.preview-layout a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.preview-layout table {
+  margin-top: 1em;
+}
+.preview-layout table,
+.preview-layout th,
+.preview-layout td {
+  border: 2px solid #224b4b;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+.preview-layout th,
+.preview-layout td {
+  padding: 1em;
+}
+.preview-layout ul {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+.preview-layout li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.preview-layout ol {
+  display: block;
+  list-style-type: decimal;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
+          padding-inline-start: 40px;
+}
+.preview-layout img {
+  margin-top: 2rem;
+}
+
+.app {
+  height: 100vh;
+  background-color: #87b5b5;
+  overflow: auto;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,69 @@
+@use '../utils/mixins' as mixin;
+
+@include mixin.xs {
+
+    #wrapper {
+        @include mixin.flexCustom(column, center, center);
+        height: 100vh;
+    }
+
+    #quote-box {
+        width: 90%;
+        margin: auto;
+        border-radius: 3px;
+        background-color: #ffffff;
+        // padding: 2em 1.5em 1.5em;
+    }
+    
+    #button-container {
+        @include mixin.flexCustom(row, space-between, center);
+        padding: 1em 0;
+    }
+}
+
+@include mixin.sm {
+        
+    #quote-box {
+        padding: 2.5em 2.2em 1.5em;
+    }
+    
+    #button-container {
+        padding: 1.7em 0 1em;
+    }
+}
+
+@include mixin.med {
+        
+    #quote-box {
+        width: 80%;
+        padding: 2em 3em 1em;
+    }
+    
+    #button-container {
+        padding: 2em 0 1em;
+    }
+}
+
+@include mixin.lg {
+    #quote-box {
+        padding: 4em 6em;
+    }
+    
+    #button-container {
+        padding: 2em 0em 1em;
+    }
+}
+
+@include mixin.xl {
+    #quote-box {
+        padding: 5em 7em;
+    }
+
+    #button-container {
+        padding: 2.3em 0;
+
+    }
+}
+
+
+

@@ -1,0 +1,7 @@
+// Single file at the root level to import all folders.
+@use 'abstracts';
+@use 'base'; // Reset styles to null, applying certain fonts, font-sizes, weight, etc to the application's text.
+@use 'layout'; // Layout of the page, positioning (e.g., home, index, courses)
+// @use 'components'; // components, buttons, labels, nav
+@use 'pages';
+// @use 'themes';

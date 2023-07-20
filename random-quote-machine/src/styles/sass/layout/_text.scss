@@ -1,0 +1,60 @@
+@use '../utils/mixins' as mixin;
+
+
+@include mixin.xs {
+
+    #text {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    #author-dash {
+        padding-right: 0.3em;
+    }
+
+    #author {
+        text-align: end;
+        padding: 2em 0 0.7em;
+        font-size: 0.8em;
+    }        
+}
+
+@include mixin.sm {
+    #text {
+        font-size: 1.1em;
+        line-height: 1.4em;
+    }
+    #author {
+        font-size: 1.1em;
+    }   
+}
+
+@include mixin.med {
+    #text {
+        font-size: 1.4em;
+    }
+    #author {
+        font-size: 1.5em;
+    } 
+}
+
+@include mixin.lg {
+    #text {
+        font-size: 1.6em;
+    }
+    #author {
+        font-size: 1.6em;
+        padding: 3em 0 1.5em;
+    } 
+}
+
+@include mixin.xl {
+    #text {
+        font-size: 2em;
+        line-height: 1.6em;
+    }
+    #author {
+        font-size: 2em;
+        padding-right: 0.3em;
+    } 
+}

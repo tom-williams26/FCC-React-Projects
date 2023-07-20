@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$font-stack;
+    font-weight: 400;
+    font-size: 1em;    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    word-spacing: 0.5px;
+    letter-spacing: 1px;
+}
+
+textarea {
+    font-family: v.$font-stack-textarea;
+}
+
+// Top margins and padding with blocks of text
+p, ol, ul, blockquote, pre, code, small {
+    line-height: 1.5em;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-size: 14px;
+}
+a, a:visited, a:active {
+    text-decoration: none;
+    line-height: 0;
+}
+
