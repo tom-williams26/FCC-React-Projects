@@ -7,10 +7,13 @@
 	margin: 0 auto;
 	@include mix.flexCustom(column, center, center);
 
-	div {
+	.display-container {
 		height: 300px;
 		width: 280px;
 		background-color: #dad873;
 		margin: 1rem 0;
+	}
+	#controls-container {
+		@include mix.flexCustom(column, center, center);
 	}
 }

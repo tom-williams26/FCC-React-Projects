@@ -5,11 +5,9 @@ import Display from './components/Display';
 
 const DrumMachine: React.FC = () => {
 	return (
-		<>
-			<div id='drum-machine'>
-				<Display />
-			</div>
-		</>
+		<div id='drum-machine'>
+			<Display />
+		</div>
 	);
 };
 

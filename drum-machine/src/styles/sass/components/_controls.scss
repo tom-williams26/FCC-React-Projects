@@ -1,0 +1,10 @@
+@use '../abstracts/mixins' as mix;
+
+.controls {
+	@include mix.flexCustom(column, center, center);
+
+	div {
+		margin: 1rem 0;
+		// @include mix.flexCustom(column, space-between, center);
+	}
+}

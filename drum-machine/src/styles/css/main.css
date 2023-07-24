@@ -107,7 +107,7 @@ a, a:visited, a:active {
   line-height: 0;
 }
 
-.display {
+#display {
   min-height: 600px;
   min-width: 300px;
   background-color: #58b368;
@@ -117,10 +117,49 @@ a, a:visited, a:active {
   justify-content: center;
   align-items: center;
 }
-.display div {
+#display .display-container {
   height: 300px;
-  width: 250px;
+  width: 280px;
   background-color: #dad873;
+  margin: 1rem 0;
+}
+#display #controls-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-pad {
+  flex-wrap: wrap;
+  width: 75px;
+  height: 75px;
+  margin: 0.75rem 0.55rem;
+  box-shadow: black 3px 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#q {
+  background-color: #213cb8;
+}
+
+#w {
+  background-color: #5baa3c;
+}
+
+#e {
+  background-color: #8dca3d;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.controls div {
   margin: 1rem 0;
 }
 
