@@ -1,19 +1,19 @@
 @use '../abstracts/mixins' as mix;
 
 #display {
-	min-height: 600px;
+	min-height: 400px;
 	min-width: 300px;
 	background-color: #58b368;
 	margin: 0 auto;
 	@include mix.flexCustom(column, center, center);
 
 	.display-container {
-		height: 300px;
 		width: 280px;
 		background-color: #dad873;
-		margin: 1rem 0;
+		margin: 0.5rem 0;
 	}
 	#controls-container {
 		@include mix.flexCustom(column, center, center);
+		height: 150px;
 	}
 }

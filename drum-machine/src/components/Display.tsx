@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './button/Button';
 import Controls from './controls/Controls';
 
@@ -9,7 +9,7 @@ type ButtonAttributes = {
 	clip: string;
 };
 
-const drumpadElement: readonly ButtonAttributes[] = [
+const audioClips: ButtonAttributes[] = [
 	{
 		idIdentifier: 'Q',
 		audioIdentifier: 'Heater-1',
@@ -57,18 +57,27 @@ const drumpadElement: readonly ButtonAttributes[] = [
 	},
 ];
 
-const buttonComponent = drumpadElement.map((element, key) => (
-	<Button
-		key={key}
-		idIdentifier={element.idIdentifier}
-		audioIdentifier={element.audioIdentifier}
-		clip={element.clip}
-	/>
-));
-const Display: React.FC = () => {
+const Display: React.FC = (audioClips) => {
+	const [audioText, setAudioText] = useState<string>('');
+
+	// const buttonComponent = drumpadElement.map((element, key) => (
+	// 	<Button
+	// 		key={key}
+	// 		idIdentifier={element.idIdentifier}
+	// 		audioIdentifier={element.audioIdentifier}
+	// 		clip={element.clip}
+	// 	/>
+	// ));
+
+	const changeAudioText = (text: string) => {
+		setAudioText(text);
+	};
+
 	return (
 		<div id='display'>
-			<div className='display-container'>{buttonComponent}</div>
+			<div className='display-container'>
+				<Button audioClips={audioClips} changeAudioText={changeAudioText} />
+			</div>
 			<div className='display-container' id='controls-container'>
 				<Controls />
 			</div>

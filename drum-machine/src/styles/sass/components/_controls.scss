@@ -3,8 +3,9 @@
 .controls {
 	@include mix.flexCustom(column, center, center);
 
-	div {
+	.sound-name-container {
 		margin: 1rem 0;
-		// @include mix.flexCustom(column, space-between, center);
+		padding: 1rem 3rem;
+		background-color: #bbbbbb;
 	}
 }

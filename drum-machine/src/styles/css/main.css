@@ -108,7 +108,7 @@ a, a:visited, a:active {
 }
 
 #display {
-  min-height: 600px;
+  min-height: 400px;
   min-width: 300px;
   background-color: #58b368;
   margin: 0 auto;
@@ -118,16 +118,16 @@ a, a:visited, a:active {
   align-items: center;
 }
 #display .display-container {
-  height: 300px;
   width: 280px;
   background-color: #dad873;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 #display #controls-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 150px;
 }
 
 .drum-pad {
@@ -159,8 +159,10 @@ a, a:visited, a:active {
   justify-content: center;
   align-items: center;
 }
-.controls div {
+.controls .sound-name-container {
   margin: 1rem 0;
+  padding: 1rem 3rem;
+  background-color: #bbbbbb;
 }
 
 #drum-machine {
