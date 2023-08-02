@@ -1,30 +1,33 @@
-// import { FunctionComponent } from 'react';
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 type ButtonProps = {
 	id: string;
 	audioName: string;
-	clip: string;
+	path: string;
+	childToParent: (childData: string) => void;
 };
 
-const Button = ({ id, audioName, clip }: ButtonProps) => {
-	const [audioText, setAudioText] = useState<string>('');
+const Button = (props: ButtonProps) => {
+	const play = document.querySelector(props.id);
 
-	// const changeAudioText = (audio: string) => {
-	// 	setAudioText(audio);
-	// };
-	const play = document.getElementById(id);
-	const audio = new Audio(clip);
-
-	const playAudio = () => {
-		audio.play();
+	const playAudio = (props: ButtonProps) => {
+		const audio = new Audio(props.path);
+		void audio.play();
 	};
-	console.log('audio: ', audioText);
+
+	// play.addEventListener('click', playAudio);
 
 	return (
-		<button className='drum-pad' id={id} onClick={playAudio}>
-			<audio id={audioName} src={clip} className='clip'></audio>
-			{id}
+		<button
+			className='drum-pad'
+			id={props.audioName}
+			onClick={() => {
+				props.childToParent(props.audioName);
+				playAudio(props);
+			}}
+		>
+			<audio className='clip' id={props.id} src={props.path} />
+			{props.id}
 		</button>
 	);
 };

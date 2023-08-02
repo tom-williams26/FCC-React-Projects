@@ -1,10 +1,11 @@
-import React from 'react';
-
-const Controls: React.FC = () => {
+type ControlProps = {
+	audioName: string;
+};
+const Controls = (props: ControlProps) => {
 	return (
 		<div className='controls'>
 			<div className='sound-name-container'>
-				<p>sound name</p>
+				<p>{props.audioName}</p>
 			</div>
 		</div>
 	);
