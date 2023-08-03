@@ -1,11 +1,11 @@
 type ControlProps = {
-	audioName: string;
+	audio: string;
 };
 const Controls = (props: ControlProps) => {
 	return (
 		<div className='controls'>
 			<div className='sound-name-container'>
-				<p>{props.audioName}</p>
+				<p>{props.audio}</p>
 			</div>
 		</div>
 	);
