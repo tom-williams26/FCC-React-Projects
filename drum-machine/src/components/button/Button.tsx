@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 type ButtonProps = {
 	id: string;
@@ -8,26 +8,38 @@ type ButtonProps = {
 };
 
 const Button = (props: ButtonProps) => {
-	const play = document.querySelector(props.id);
+	const btnRef = useRef<HTMLButtonElement>(null);
 
-	const playAudio = (props: ButtonProps) => {
-		const audio = new Audio(props.path);
+	useEffect(() => {
+		const element = btnRef.current;
+		element?.addEventListener('click', playAudio);
+		return () => element?.removeEventListener('click', playAudio);
+	}, []);
+
+	const playAudio = (event: MouseEvent) => {
+		const audio = new Audio();
+		audio.src = props.path;
 		void audio.play();
 	};
 
-	// play.addEventListener('click', playAudio);
-
 	return (
+		audioClips.map((element) => (
+		<Button
+			id={element.id}
+			audioName={element.audioName}
+			path={element.path}
+			childToParent={childToParent}
+		/>
+	))
 		<button
 			className='drum-pad'
+			key={props.id}
 			id={props.audioName}
-			onClick={() => {
-				props.childToParent(props.audioName);
-				playAudio(props);
-			}}
+			ref={btnRef}
+			onClick={() => props.childToParent(props.audioName)}
 		>
-			<audio className='clip' id={props.id} src={props.path} />
-			{props.id}
+			<audio id={props.id.toUpperCase()} src={props.path} className='clip' />
+			{props.id.toUpperCase()}
 		</button>
 	);
 };

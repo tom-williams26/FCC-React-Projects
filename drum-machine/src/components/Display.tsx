@@ -11,47 +11,47 @@ type AudioProps = {
 
 const audioClips: Array<AudioProps> = [
 	{
-		id: 'Q',
+		id: 'q',
 		audioName: 'Heater-1',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3',
 	},
 	{
-		id: 'W',
+		id: 'w',
 		audioName: 'Heater-2',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3',
 	},
 	{
-		id: 'E',
+		id: 'e',
 		audioName: 'Heater-3',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3',
 	},
 	{
-		id: 'A',
+		id: 'a',
 		audioName: 'Heater-4',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3',
 	},
 	{
-		id: 'S',
+		id: 's',
 		audioName: 'Clap',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3',
 	},
 	{
-		id: 'D',
+		id: 'd',
 		audioName: 'Open-HH',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3',
 	},
 	{
-		id: 'Z',
+		id: 'z',
 		audioName: "Kick-n'-Hat",
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3',
 	},
 	{
-		id: 'X',
+		id: 'x',
 		audioName: 'Kick',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3',
 	},
 	{
-		id: 'C',
+		id: 'c',
 		audioName: 'Closed-HH',
 		path: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3',
 	},
@@ -64,21 +64,23 @@ const Display = () => {
 		setAudioName(childData);
 	};
 
-	const buttonComponent = audioClips.map((element, key) => (
-		<Button
-			key={key}
-			id={element.id}
-			audioName={element.audioName}
-			path={element.path}
-			childToParent={childToParent}
-		/>
-	));
+	// const buttonComponent = audioClips.map((element, key) => (
+	// 	<Button
+	// 		key={key}
+	// 		id={element.id}
+	// 		audioName={element.audioName}
+	// 		path={element.path}
+	// 		childToParent={childToParent}
+	// 	/>
+	// ));
 
 	// console.log(audioName);
 
 	return (
 		<div id='display'>
-			<div className='display-container'>{buttonComponent}</div>
+			<div className='display-container'>
+				<Button audioClips={audioClips} childToParent={childToParent} />
+			</div>
 			<div className='display-container' id='controls-container'>
 				<Controls audioName={audioName} />
 			</div>
